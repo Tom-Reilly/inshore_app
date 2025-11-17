@@ -20,25 +20,27 @@ app_ui <- function(request) {
       dashboardSidebar(
         sidebarMenu(id = "tabs",
           menuItem("Home", tabName = "Home"),
-          menuItem("Nephrops", tabName = "Nephrops"),
-          menuItem("Scallops", tabName = "Scallops"),
+          menuItem("Data Collection", tabName = "Data_Collection"),
+          menuItem("Brown crab", tabName = "Brown_crab"),
           menuItem("Cockles", tabName = "Cockles"),
-          menuItem("Razor clams", tabName = "Razor_clams"),
-          menuItem("Brown crabs", tabName = "Brown_crabs"),
-          menuItem("Velvet crabs", tabName = "Velvet_crabs"),
           menuItem("Lobsters", tabName = "Lobsters"),
-          menuItem("Wrasse", tabName = "Wrasse"),
-          menuItem("Vessels and Sampling", tabName = "Vessels_and_Sampling")
+          menuItem("Nephrops", tabName = "Nephrops"),
+          menuItem("Razor clams", tabName = "Razor_clams"),
+          menuItem("Scallops", tabName = "Scallops"),
+          menuItem("Velvet crabs", tabName = "Velvet_crabs"),
+          menuItem("Wrasse", tabName = "Wrasse")#,
+          #menuItem("Vessels and Sampling", tabName = "Vessels_and_Sampling")
         )
       ),
       dashboardBody(
         tabItems(
           tabItem(tabName = "Home", mod_home_ui("home_1")),
+          tabItem(tabName = "Data_Collection", mod_dataCollection_ui("dataCollection_1")),
+          tabItem(tabName = "Brown_crab", mod_browncrab_ui("browncrab_1")),
           tabItem(tabName = "Nephrops", mod_nephrops_ui("nephrops_1")),
           tabItem(tabName = "Scallops", mod_scallops_ui("scallops_1")),
           tabItem(tabName = "Cockles", mod_cockles_ui("cockles_1")),
           tabItem(tabName = "Razor_clams", mod_razors_ui("razors_1")),
-          tabItem(tabName = "Brown_crabs", mod_browncrab_ui("browncrab_1")),
           tabItem(tabName = "Velvet_crabs", mod_velvetcrab_ui("velvetcrab_1")),
           tabItem(tabName = "Lobsters", mod_lobsters_ui("lobsters_1")),
           tabItem(tabName = "Wrasse", mod_wrasse_ui("wrasse_1")),

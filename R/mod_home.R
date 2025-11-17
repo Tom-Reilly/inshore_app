@@ -13,38 +13,56 @@ mod_home_ui <- function(id){
   tagList(
     fluidPage(
       fluidRow(
-        box(title = "Inshore Fisheries",
+        box(title = "Introduction to Inshore Fisheries",
             status = "primary",
             solidHeader = TRUE,
             width = 12,
             includeHTML(app_sys("home_intro.html")))
       ),
       fluidRow(
-        column(width = 6,
-        box(title = "What is 'inshore'?",
+        box(title = "Management",
             status = "primary",
             solidHeader = TRUE,
-            width = NULL,
-            includeHTML(app_sys("home_whatisinshore.html"))),
-        box(title = "Coastal Communities",
-            status = "primary",
-            solidHeader = TRUE,
-            width = NULL,
-            includeHTML(app_sys("home_coastalcomms.html")))
-        ),
-        column(width = 6,
-        box(title = "Data Collection",
-            status = "primary",
-            solidHeader = TRUE,
-            width = NULL,
-            includeHTML(app_sys("home_datacollection.html"))),
-        box(title = "Regional Inshore Fisheries Groups",
-            status = "primary",
-            solidHeader = TRUE,
-            width = NULL,
-            includeHTML(app_sys("home_rifg.html")))
+            width = 12,
+            includeHTML(app_sys("home_management.html")))
+      ),
+      fluidRow(
+        box(
+          status = "primary",
+          solidHeader = TRUE,
+          width = 12,
+        img(src="img/boat_scene.jpg",
+            alt = "boat stationary in water scence",
+            style = "max-width: 100%;"
+            )
         )
       )
+      #fluidRow(
+      #  column(width = 6,
+      #  box(title = "What is 'inshore'?",
+      #      status = "primary",
+      #      solidHeader = TRUE,
+      #      width = NULL,
+      #      includeHTML(app_sys("home_whatisinshore.html"))),
+      #  box(title = "Coastal Communities",
+      #      status = "primary",
+      #      solidHeader = TRUE,
+      #      width = NULL,
+      #      includeHTML(app_sys("home_coastalcomms.html")))
+      #  ),
+      #  column(width = 6,
+      #  box(title = "Data Collection",
+      #      status = "primary",
+      #      solidHeader = TRUE,
+      #      width = NULL,
+      #      includeHTML(app_sys("home_datacollection.html"))),
+      #  box(title = "Regional Inshore Fisheries Groups",
+      #      status = "primary",
+      #      solidHeader = TRUE,
+      #      width = NULL,
+      #      includeHTML(app_sys("home_rifg.html")))
+      #  )
+      #)
     )
   )
 }
