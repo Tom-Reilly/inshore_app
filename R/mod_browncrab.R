@@ -34,28 +34,64 @@ mod_browncrab_ui <- function(id){
         box(title = "Biology",
             status = "primary",
             solidHeader = TRUE,
-            width = 6,
-            includeHTML(app_sys("browncrab_biology.html"))),
+            width = 12,
+            column(width = 6, includeHTML(app_sys("browncrab_biology_txt.html"))),
+            column(width = 6, includeHTML(app_sys("browncrab_biology_img.html")))
+            )
+      ),
+      fluidRow(
         box(title = "Fishery",
             status = "primary",
             solidHeader = TRUE,
-            width = 6,
-            includeHTML(app_sys("browncrab_fishery.html")))
+            width = 12,
+            column(width = 6, includeHTML(app_sys("browncrab_fishery_txt.html"))),
+            column(width = 6, includeHTML(app_sys("browncrab_fishery_img.html")))
+        )
       ),
       fluidRow(
         box(title = "Surveys and Sampling",
             status = "primary",
             solidHeader = TRUE,
-            width = 6,
-            includeHTML(app_sys("browncrab_survey.html"))),
+            width = 12,
+            column(width = 6, includeHTML(app_sys("browncrab_survey_txt.html"))),
+            column(width = 6, includeHTML(app_sys("browncrab_survey_img.html")))
+        )
+      ),
+      fluidRow(
         box(title = "Assessment and Advice",
             status = "primary",
             solidHeader = TRUE,
-            width = 6,
-            includeHTML(app_sys("browncrab_assessment.html")))
+            width = 12,
+            column(width = 6, includeHTML(app_sys("browncrab_assessment_txt.html"))),
+            column(width = 6, includeHTML(app_sys("browncrab_assessment_img.html")))
+        )
       ),
+#      fluidRow(
+#        box(title = "Biology",
+#            status = "primary",
+#            solidHeader = TRUE,
+#            width = 6,
+#            includeHTML(app_sys("browncrab_biology.html"))),
+#        box(title = "Fishery",
+#            status = "primary",
+#            solidHeader = TRUE,
+#            width = 6,
+#            includeHTML(app_sys("browncrab_fishery.html")))
+#      ),
+#      fluidRow(
+#        box(title = "Surveys and Sampling",
+#            status = "primary",
+#            solidHeader = TRUE,
+#            width = 6,
+#            includeHTML(app_sys("browncrab_survey.html"))),
+#        box(title = "Assessment and Advice",
+#            status = "primary",
+#            solidHeader = TRUE,
+#            width = 6,
+#            includeHTML(app_sys("browncrab_assessment.html")))
+#      ),
       fluidRow(
-        box(title = "Publications",
+        box(title = "Further Information",
             status = "primary",
             solidHeader = TRUE,
             width = 12,

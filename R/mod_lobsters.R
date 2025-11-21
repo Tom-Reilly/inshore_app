@@ -47,10 +47,11 @@ mod_lobsters_ui <- function(id){
             includeHTML(app_sys("lobsters_assessment.html")))
       ),
       fluidRow(
-        box(title = "Publications",
+        box(title = "Further Information",
             status = "primary",
             solidHeader = TRUE,
-            width = 12)
+            width = 12,
+            includeHTML(app_sys("lobsters_publications.html")))
       )
     )
   )

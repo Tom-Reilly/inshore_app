@@ -55,7 +55,7 @@ mod_wrasse_ui <- function(id){
             includeHTML(app_sys("wrasse_assessment.html")))
       ),
       fluidRow(
-        box(title = "Publications",
+        box(title = "Further Information",
             status = "primary",
             solidHeader = TRUE,
             width = 12)

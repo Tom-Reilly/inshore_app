@@ -55,7 +55,7 @@ mod_nephrops_ui <- function(id){
             includeHTML(app_sys("nephrops_assessment.html")))
       ),
       fluidRow(
-        box(title = "Publications",
+        box(title = "Further Information",
             status = "primary",
             solidHeader = TRUE,
             width = 12,

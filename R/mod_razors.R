@@ -48,7 +48,7 @@ mod_razors_ui <- function(id){
             includeHTML(app_sys("razors_assessment.html")))
       ),
       fluidRow(
-        box(title = "Publications",
+        box(title = "Further Information",
             status = "primary",
             solidHeader = TRUE,
             width = 12,
