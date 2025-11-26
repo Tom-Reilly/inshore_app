@@ -58,7 +58,8 @@ mod_wrasse_ui <- function(id){
         box(title = "Further Information",
             status = "primary",
             solidHeader = TRUE,
-            width = 12)
+            width = 12,
+            includeHTML(app_sys("wrasse_publications.html")))
       )
     )
   )
