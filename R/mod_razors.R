@@ -12,40 +12,63 @@ mod_razors_ui <- function(id){
   tagList(
     fluidPage(
       fluidRow(
-        h1("Razor clams", style = "text-align: center; padding:bottom: 10px")
+        box(title=h1("Razor clam", align = "center"),
+            background = "light-blue",
+            width = 12,
+            style = "text-align: center;")
+      #  h1("Razor clam", style = "text-align: center; padding:bottom: 10px")
       ),
       fluidRow(
-        valueBox("569 tonnes",
-                 "2023 landings by Scottish vessels into Scotland",
-                 href = "https://www.gov.scot/publications/scottish-sea-fisheries-statistics-2023/",
-                 color = "yellow", icon = icon("scale-balanced"), width = 6),
-        valueBox("£5.295 million", "2023 value of landings by Scottish vessels into Scotland",
-                 href = "https://www.gov.scot/publications/scottish-sea-fisheries-statistics-2023/",
-                 color = "purple", icon = icon("sterling-sign"), width = 6)
+        valueBox("537 tonnes",
+                 subtitle = HTML("<p style = 'font-size : 16px;'>2024 landings by Scottish vessels into Scotland</p>
+                 <p style = 'font-size : 10px;'>Scottish Sea Fisheries Statistics 2024</p>"),
+                 href = "https://www.gov.scot/publications/scottish-sea-fisheries-statistics-2024/",
+                 color = "yellow",
+                 icon = icon("scale-balanced"),
+                 width = 6),
+        valueBox("&pound;4.805 million",
+                 subtitle = HTML("<p style = 'font-size : 16px;'>2024 value of landings by Scottish vessels into Scotland</p>
+                 <p style = 'font-size : 10px;'>Scottish Sea Fisheries Statistics 2024</p>"),
+                 href = "https://www.gov.scot/publications/scottish-sea-fisheries-statistics-2024/",
+                 color = "purple",
+                 icon = icon("sterling-sign"),
+                 width = 6)
       ),
       fluidRow(
         box(title = "Biology",
             status = "primary",
             solidHeader = TRUE,
-            width = 6,
-            includeHTML(app_sys("razors_biology.html"))),
+            width = 12,
+            column(width = 6, includeHTML(app_sys("razors_biology_txt.html"))),
+            column(width = 6, includeHTML(app_sys("razors_biology_img.html")))
+        )
+      ),
+      fluidRow(
         box(title = "Fishery",
             status = "primary",
             solidHeader = TRUE,
-            width = 6,
-            includeHTML(app_sys("razors_fishery.html")))
+            width = 12,
+            column(width = 6, includeHTML(app_sys("razors_fishery_txt.html"))),
+            column(width = 6, includeHTML(app_sys("razors_fishery_img.html")))
+        )
       ),
       fluidRow(
         box(title = "Surveys and Sampling",
             status = "primary",
             solidHeader = TRUE,
-            width = 6,
-            includeHTML(app_sys("razors_survey.html"))),
-        box(title = "Assessment",
+            width = 12,
+            column(width = 6, includeHTML(app_sys("razors_survey_txt.html"))),
+            column(width = 6, includeHTML(app_sys("razors_survey_img.html")))
+        )
+      ),
+      fluidRow(
+        box(title = "Assessment and Advice",
             status = "primary",
             solidHeader = TRUE,
-            width = 6,
-            includeHTML(app_sys("razors_assessment.html")))
+            width = 12,
+            column(width = 6, includeHTML(app_sys("razors_assessment_txt.html"))),
+            column(width = 6, includeHTML(app_sys("razors_assessment_img.html")))
+        )
       ),
       fluidRow(
         box(title = "Further Information",

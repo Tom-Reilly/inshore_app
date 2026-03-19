@@ -12,20 +12,24 @@ mod_nephrops_ui <- function(id){
   tagList(
     fluidPage(
       fluidRow(
-        h1("Nephrops norvegicus", style = "text-align: center; padding:bottom: 10px")
+        box(title=h1("Nephrops norvegicus", align = "center"),
+            background = "light-blue",
+            width = 12,
+            style = "text-align: center;")
+      #  h1("Nephrops norvegicus", style = "text-align: center; padding:bottom: 10px")
       ),
       fluidRow(
-        valueBox(value = "19,658 tonnes",
-                 subtitle = HTML("<p style = 'font-size : 16px;'>2023 landings by Scottish vessels into Scotland</p>
-                 <p style = 'font-size : 10px;'>Scottish Sea Fisheries Statistics 2023</p>"),
-                 href = "https://www.gov.scot/publications/scottish-sea-fisheries-statistics-2023/",
+        valueBox(value = "19,581 tonnes",
+                 subtitle = HTML("<p style = 'font-size : 16px;'>2024 landings by Scottish vessels into Scotland</p>
+                 <p style = 'font-size : 10px;'>Scottish Sea Fisheries Statistics 2024</p>"),
+                 href = "https://www.gov.scot/publications/scottish-sea-fisheries-statistics-2024/",
                  color = "yellow",
                  icon = icon("scale-balanced"),
                  width = 6),
-        valueBox(value = "£82.234 million",
-                 subtitle = HTML("<p style = 'font-size : 16px;'>2023 value of landings by Scottish vessels into Scotland</p>
-                 <p style = 'font-size : 10px;'>Scottish Sea Fisheries Statistics 2023</p>"),
-                 href = "https://www.gov.scot/publications/scottish-sea-fisheries-statistics-2023/",
+        valueBox(value = "&pound;78.164 million",
+                 subtitle = HTML("<p style = 'font-size : 16px;'>2024 value of landings by Scottish vessels into Scotland</p>
+                 <p style = 'font-size : 10px;'>Scottish Sea Fisheries Statistics 2024</p>"),
+                 href = "https://www.gov.scot/publications/scottish-sea-fisheries-statistics-2024/",
                  color = "purple",
                  icon = icon("sterling-sign"),
                  width = 6)
@@ -34,25 +38,37 @@ mod_nephrops_ui <- function(id){
         box(title = "Biology",
             status = "primary",
             solidHeader = TRUE,
-            width = 6,
-            includeHTML(app_sys("nephrops_biology.html"))),
+            width = 12,
+            column(width = 6, includeHTML(app_sys("nephrops_biology_txt.html"))),
+            column(width = 6, includeHTML(app_sys("nephrops_biology_img.html")))
+        )
+      ),
+      fluidRow(
         box(title = "Fishery",
             status = "primary",
             solidHeader = TRUE,
-            width = 6,
-            includeHTML(app_sys("nephrops_fishery.html")))
+            width = 12,
+            column(width = 6, includeHTML(app_sys("nephrops_fishery_txt.html"))),
+            column(width = 6, includeHTML(app_sys("nephrops_fishery_img.html")))
+        )
       ),
       fluidRow(
         box(title = "Surveys and Sampling",
             status = "primary",
             solidHeader = TRUE,
-            width = 6,
-            includeHTML(app_sys("nephrops_survey.html"))),
-        box(title = "Assessment",
+            width = 12,
+            column(width = 6, includeHTML(app_sys("nephrops_survey_txt.html"))),
+            column(width = 6, includeHTML(app_sys("nephrops_survey_img.html")))
+        )
+      ),
+      fluidRow(
+        box(title = "Assessment and Advice",
             status = "primary",
             solidHeader = TRUE,
-            width = 6,
-            includeHTML(app_sys("nephrops_assessment.html")))
+            width = 12,
+            column(width = 6, includeHTML(app_sys("nephrops_assessment_txt.html"))),
+            column(width = 6, includeHTML(app_sys("nephrops_assessment_img.html")))
+        )
       ),
       fluidRow(
         box(title = "Further Information",

@@ -12,20 +12,24 @@ mod_browncrab_ui <- function(id){
   tagList(
     fluidPage(
       fluidRow(
-        h1("Brown crab", style = "text-align: center; padding:bottom: 10px")
+        box(title=h1("Brown crab", align = "center"),
+            background = "light-blue",
+            width = 12,
+            style = "text-align: center;")
+        #h1("Brown crab", style = "text-align: center; padding:bottom: 10px")
       ),
       fluidRow(
-        valueBox(value = "5,614 tonnes",
-                 subtitle = HTML("<p style = 'font-size : 16px;'>2023 landings by Scottish vessels into Scotland</p>
-                 <p style = 'font-size : 10px;'>Scottish Sea Fisheries Statistics 2023</p>"),
-                 href = "https://www.gov.scot/publications/scottish-sea-fisheries-statistics-2023/",
+        valueBox(value = "6,042 tonnes",
+                 subtitle = HTML("<p style = 'font-size : 16px;'>2024 landings by Scottish vessels into Scotland</p>
+                 <p style = 'font-size : 10px;'>Scottish Sea Fisheries Statistics 2024</p>"),
+                 href = "https://www.gov.scot/publications/scottish-sea-fisheries-statistics-2024/",
                  color = "yellow",
                  icon = icon("scale-balanced"),
                  width = 6),
-        valueBox(value = "\u00A315.178 million",
-                 subtitle = HTML("<p style = 'font-size : 16px;'>2023 value of landings by Scottish vessels into Scotland</p>
-                 <p style = 'font-size : 10px;'>Scottish Sea Fisheries Statistics 2023</p>"),
-                 href = "https://www.gov.scot/publications/scottish-sea-fisheries-statistics-2023/",
+        valueBox(value = "\u00A314.342 million",
+                 subtitle = HTML("<p style = 'font-size : 16px;'>2024 value of landings by Scottish vessels into Scotland</p>
+                 <p style = 'font-size : 10px;'>Scottish Sea Fisheries Statistics 2024</p>"),
+                 href = "https://www.gov.scot/publications/scottish-sea-fisheries-statistics-2024/",
                  color = "purple",
                  icon = icon("sterling-sign"),
                  width = 6)
@@ -66,30 +70,6 @@ mod_browncrab_ui <- function(id){
             column(width = 6, includeHTML(app_sys("browncrab_assessment_img.html")))
         )
       ),
-#      fluidRow(
-#        box(title = "Biology",
-#            status = "primary",
-#            solidHeader = TRUE,
-#            width = 6,
-#            includeHTML(app_sys("browncrab_biology.html"))),
-#        box(title = "Fishery",
-#            status = "primary",
-#            solidHeader = TRUE,
-#            width = 6,
-#            includeHTML(app_sys("browncrab_fishery.html")))
-#      ),
-#      fluidRow(
-#        box(title = "Surveys and Sampling",
-#            status = "primary",
-#            solidHeader = TRUE,
-#            width = 6,
-#            includeHTML(app_sys("browncrab_survey.html"))),
-#        box(title = "Assessment and Advice",
-#            status = "primary",
-#            solidHeader = TRUE,
-#            width = 6,
-#            includeHTML(app_sys("browncrab_assessment.html")))
-#      ),
       fluidRow(
         box(title = "Further Information",
             status = "primary",

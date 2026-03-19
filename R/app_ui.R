@@ -10,7 +10,7 @@ app_ui <- function(request) {
     # Leave this function for adding external resources
     golem_add_external_resources(),
     tags$body(
-      tags$div("Under development", style = "text-transform: uppercase; color: red; text-align: center; font-size: 35px;"),
+      #tags$div("Under development", style = "text-transform: uppercase; color: red; text-align: center; font-size: 35px;"),
     # Your application UI logic
     dashboardPage(
       skin = "blue",
@@ -22,14 +22,13 @@ app_ui <- function(request) {
           menuItem("Home", tabName = "Home"),
           menuItem("Data Collection", tabName = "Data_Collection"),
           menuItem("Brown crab", tabName = "Brown_crab"),
-          menuItem("Cockles", tabName = "Cockles"),
-          menuItem("Lobsters", tabName = "Lobsters"),
+          menuItem("Cockle", tabName = "Cockles"),
+          menuItem("Lobster", tabName = "Lobsters"),
           menuItem("Nephrops", tabName = "Nephrops"),
-          menuItem("Razor clams", tabName = "Razor_clams"),
-          menuItem("Scallops", tabName = "Scallops"),
-          menuItem("Velvet crabs", tabName = "Velvet_crabs"),
-          menuItem("Wrasse", tabName = "Wrasse")#,
-          #menuItem("Vessels and Sampling", tabName = "Vessels_and_Sampling")
+          menuItem("Razor clam", tabName = "Razor_clams"),
+          menuItem("Scallop", tabName = "Scallops"),
+          menuItem("Velvet crab", tabName = "Velvet_crabs"),
+          menuItem("Wrasse", tabName = "Wrasse")
         )
       ),
       dashboardBody(
@@ -43,8 +42,7 @@ app_ui <- function(request) {
           tabItem(tabName = "Razor_clams", mod_razors_ui("razors_1")),
           tabItem(tabName = "Velvet_crabs", mod_velvetcrab_ui("velvetcrab_1")),
           tabItem(tabName = "Lobsters", mod_lobsters_ui("lobsters_1")),
-          tabItem(tabName = "Wrasse", mod_wrasse_ui("wrasse_1")),
-          tabItem(tabName = "Vessels_and_Sampling", mod_vessels_ui("vessels_1"))
+          tabItem(tabName = "Wrasse", mod_wrasse_ui("wrasse_1"))
         )
         )
       )
